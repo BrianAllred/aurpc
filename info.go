@@ -5,6 +5,7 @@
 
 package aurpc
 
+// Info object returned from a package info request
 type Info struct {
 	Version     int    `json:"version"`
 	Type        string `json:"type"`

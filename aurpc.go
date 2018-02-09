@@ -54,18 +54,22 @@ func aurSearch(keywords string, byField string) (*Search, error) {
 	return &search, nil
 }
 
+// SearchByName searches the AUR by package name
 func SearchByName(keywords string) (*Search, error) {
 	return aurSearch(keywords, "name")
 }
 
+// SearchByNameDesc searches the AUR by package name and description
 func SearchByNameDesc(keywords string) (*Search, error) {
 	return aurSearch(keywords, "name-desc")
 }
 
+// SearchByMaintainer searches the AUR by maintainer name
 func SearchByMaintainer(keywords string) (*Search, error) {
 	return aurSearch(keywords, "maintainer")
 }
 
+// PkgInfo gets information for the given packages
 func PkgInfo(packages ...string) (*Info, error) {
 	if len(packages) < 1 {
 		return nil, errors.New("invalid packages")

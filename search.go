@@ -5,6 +5,7 @@
 
 package aurpc
 
+// Search object returned from a package search request
 type Search struct {
 	Version     int    `json:"version"`
 	Type        string `json:"type"`
